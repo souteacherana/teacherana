@@ -18,17 +18,10 @@ const LINKS: {
   featured?: boolean;
 }[] = [
   {
-    href: 'https://www.riseeducacao.com.br/led?utm_source=bioh&utm_medium=hnrq&utm_content=bioh',
-    img: 'https://dtfnsnlwyzhalvu7.public.blob.vercel-storage.com/LP%20-%20LED/led.webp',
+    href: 'https://www.riseeducacao.com.br/blackdateacher?utm_source=bioh&utm_medium=hnrq&utm_content=bioh',
+    img: 'https://dtfnsnlwyzhalvu7.public.blob.vercel-storage.com/LP%20-%20BLACK%202026/black.webp',
     label: 'GARANTA SUA VAGA',
-    title: 'LUCRANDO COM ESCOLA DIGITAL',
-    featured: true,
-  },
-  {
-    href: 'https://teacherana.com.br/imersaorise2026?utm_source=bioh&utm_medium=hnrq&utm_content=bioh',
-    img: 'https://dtfnsnlwyzhalvu7.public.blob.vercel-storage.com/imersao.webp',
-    label: 'LOTE 03',
-    title: 'IMERSÃO RISE 2026',
+    title: 'BLACK DA TEACHER',
     featured: true,
   },
   {
