@@ -1,0 +1,5 @@
+/* Reset mínimo compartilhado. O estilo de cada página fica no CSS da própria rota,
+   sempre preso a uma classe raiz (.bio, .vhs, .adm) para uma não vazar na outra. */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #0a0a0a; }
