@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from 'next';
 import { dmSans, instrumentSerif } from '@/lib/fonts';
-import './bioh.css';
+import './bio.css';
 
 export const metadata: Metadata = {
   title: 'Teacher Ana | @souteacherana',
