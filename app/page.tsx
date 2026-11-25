@@ -22,7 +22,8 @@ export default function Home() {
       <Nav />
 
       <a href={links.vaga} className="ribbon">
-        Imersão Rise 2026 · [{rise.vagasVendidas}]% das vagas vendidas. <span>Garanta a sua ›</span>
+        Imersão Rise 2026 · {rise.vagasVendidas !== null ? `${rise.vagasVendidas}% das vagas vendidas.` : "Vagas abertas."}{" "}
+        <span>Garanta a sua ›</span>
       </a>
 
       <main id="topo">
@@ -113,7 +114,7 @@ export default function Home() {
         <section className="workshop container" id="workshop">
           <div className="workshop-text">
             <Reveal>
-              <p className="eyebrow">Workshop do mês · {workshop.mes}</p>
+              <p className="eyebrow">Workshop do mês{workshop.mes ? ` · ${workshop.mes}` : ""}</p>
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="display">
@@ -171,12 +172,14 @@ export default function Home() {
                 <span key={p}>{p}</span>
               ))}
             </Reveal>
-            <Reveal className="lotacao" delay={0.32}>
-              <p className="eyebrow light small">[{rise.vagasVendidas}]% das vagas vendidas</p>
-              <div className="bar">
-                <div className="bar-fill" style={{ "--w": `${rise.vagasVendidas}%` } as CSSProperties} />
-              </div>
-            </Reveal>
+            {rise.vagasVendidas !== null && (
+              <Reveal className="lotacao" delay={0.32}>
+                <p className="eyebrow light small">{rise.vagasVendidas}% das vagas vendidas</p>
+                <div className="bar">
+                  <div className="bar-fill" style={{ "--w": `${rise.vagasVendidas}%` } as CSSProperties} />
+                </div>
+              </Reveal>
+            )}
             <Reveal className="cta-row" delay={0.4}>
               <a href={links.vaga} className="btn btn-light">
                 Garantir minha vaga

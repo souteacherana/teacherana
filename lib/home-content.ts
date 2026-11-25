@@ -1,5 +1,6 @@
-// Todo o conteúdo editável da home. Itens entre [colchetes] são provisórios:
-// faltam a data do workshop do mês e o percentual de vagas vendidas da Imersão Rise.
+// Todo o conteúdo editável da home.
+// Ainda sem dado (ficam escondidos na página até serem preenchidos):
+// mês, data e horário do workshop do mês e o percentual de vagas vendidas da Imersão Rise.
 
 export const navLinks = [
   { label: "Formações", href: "#formacoes" },
@@ -35,13 +36,12 @@ export const formacoes = [
 ];
 
 export const workshop = {
-  mes: "[MÊS]",
+  mes: "", // ex.: "Dezembro". Vazio = não aparece.
   titulo: ["Vivendo Só", "de Turmas"],
   texto:
     "Descubra como sair da dependência das aulas particulares e montar turmas que lotam — com mais faturamento e menos horas presas na agenda.",
   infos: [
-    { rotulo: "Data", valor: "[dd/mm]" },
-    { rotulo: "Horário", valor: "[00h00]" },
+    // Quando houver data: { rotulo: "Data", valor: "dd/mm" }, { rotulo: "Horário", valor: "00h00" },
     { rotulo: "Formato", valor: "Online e ao vivo" },
   ],
 };
@@ -51,7 +51,7 @@ export const rise = {
   texto:
     "Dois dias para sair do improviso e construir a estrutura do seu negócio de ensino: posicionamento, turmas, vendas e Instagram — ao vivo com a Teacher Ana e com quem já fez acontecer.",
   pilares: ["Plano de turmas", "Instagram que vende", "Rotina de vendas", "Networking"],
-  vagasVendidas: 85, // em %
+  vagasVendidas: null as number | null, // em %. null = faixa e barra de lotação não mostram o número.
 };
 
 export const numeros = [
