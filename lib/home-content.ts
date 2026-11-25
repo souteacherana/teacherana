@@ -1,4 +1,5 @@
-// Todo o conteúdo editável da home. Itens entre [colchetes] são provisórios.
+// Todo o conteúdo editável da home. Itens entre [colchetes] são provisórios:
+// faltam a data do workshop do mês e o percentual de vagas vendidas da Imersão Rise.
 
 export const navLinks = [
   { label: "Formações", href: "#formacoes" },
@@ -11,9 +12,9 @@ export const navLinks = [
 
 export const links = {
   instagram: "https://www.instagram.com/souteacherana/",
-  whatsapp: "#", // TODO: link do WhatsApp da equipe
-  vaga: "#rise", // TODO: link do checkout da Imersão Rise
-  workshop: "#", // TODO: link de inscrição do workshop do mês
+  whatsapp: "https://api.whatsapp.com/send?phone=5567992796191&text=Ol%C3%A1%2C%20quero%20conhecer%20os%20programas%20da%20Teacher%20Ana!",
+  vaga: "https://teacherana.com.br/imersaorise2026/",
+  workshop: "https://api.whatsapp.com/send?phone=5567992796191&text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20Workshops%20Pr%C3%A1ticos!",
 };
 
 export const dores = [
@@ -46,7 +47,7 @@ export const workshop = {
 };
 
 export const rise = {
-  chamada: "Evento presencial · [DATA] · [CIDADE]",
+  chamada: "Evento presencial · Alphaville - SP · Espaço Altus",
   texto:
     "Dois dias para sair do improviso e construir a estrutura do seu negócio de ensino: posicionamento, turmas, vendas e Instagram — ao vivo com a Teacher Ana e com quem já fez acontecer.",
   pilares: ["Plano de turmas", "Instagram que vende", "Rotina de vendas", "Networking"],
@@ -54,29 +55,50 @@ export const rise = {
 };
 
 export const numeros = [
-  { valor: "+[000]", rotulo: "teachers formados" },
-  { valor: "[00]", rotulo: "turmas abertas por alunas" },
-  { valor: "[000]k", rotulo: "teachers acompanham no Instagram" },
-  { valor: "[0]", rotulo: "edições da Imersão Rise" },
+  { valor: "+1.200", rotulo: "professores formados no Brasil e no exterior" },
+  { valor: "+R$ 3M", rotulo: "em faturamento gerado pelos mentorados Rise" },
+  { valor: "4", rotulo: "edições da Imersão Rise" },
+  { valor: "4.9★", rotulo: "de satisfação dos alunos" },
 ];
 
-const casoModelo = {
-  resultado: "[R$ 00k]",
-  legenda: "[por mês com turmas]",
-  texto: "[Depoimento da teacher — 2 a 3 linhas contando o antes e o depois de aplicar o método.]",
-  nome: "[Nome da teacher]",
-  cargo: "Professora de [idioma] · [cidade]",
-};
-export const casos = [casoModelo, casoModelo, casoModelo];
+// "citacao: true" quando o texto é a fala da própria teacher (aparece entre aspas).
+export const casos = [
+  {
+    resultado: "R$ 26k",
+    legenda: "por mês, com 15h de aula por semana",
+    texto:
+      "Em 1 ano: de 47h pra 15h por semana, de 11k pra 26k de faturamento, de 37 pra 82 alunos. Não trabalhei mais, trabalhei diferente. O problema nunca foi captação, era modelo de negócio.",
+    citacao: true,
+    nome: "Ana Paula Di Dio",
+    cargo: "Teacher & Mentora",
+  },
+  {
+    resultado: "R$ 18k",
+    legenda: "por mês com turmas lucrativas",
+    texto:
+      "Cobrava R$ 45 a hora-aula, com a agenda lotada de segunda a sábado. Com o reposicionamento e a criação de turmas, a hora-aula passou de R$ 160 e o faturamento mensal ultrapassou R$ 18.000, com previsibilidade.",
+    citacao: false,
+    nome: "Teacher Driely",
+    cargo: "Teacher de Idiomas",
+  },
+  {
+    resultado: "R$ 12k",
+    legenda: "por mês, com lista de espera",
+    texto:
+      "Dependia só de indicações ocasionais e não tinha processo de vendas. Com o roteiro comercial consultivo da Rise, converte mais de 70% das reuniões e mantém o faturamento acima de R$ 12.000 mensais.",
+    citacao: false,
+    nome: "Teacher Juliana",
+    cargo: "Professora Particular & Empreendedora",
+  },
+];
 
 export const sobre = {
   destaque: "Teacher, empresária e estrategista de negócios para professores de idiomas.",
   texto:
     "A Ana ajuda teachers a deixarem de atuar só como professores e construírem um negócio educacional lucrativo, estruturado e com autoridade no digital — com turmas, posicionamento e um Instagram que gera alunos de verdade.",
   numeros: [
-    { valor: "[00] anos", rotulo: "ensinando idiomas" },
-    { valor: "+[000]", rotulo: "teachers impactados" },
-    { valor: "[000]k", rotulo: "seguidores no Instagram" },
+    { valor: "2021", rotulo: "início no digital" },
+    { valor: "+1.000", rotulo: "professores auxiliados" },
   ],
 };
 
@@ -89,16 +111,25 @@ export const motivos = [
 
 export const faq = [
   {
-    p: "Para quem são os produtos da Teacher Ana?",
-    r: "Para professores de idiomas que querem sair do improviso e crescer como negócio: formar turmas, atrair alunos pelo Instagram e vender com previsibilidade.",
+    p: "Para quem são os programas da Teacher Ana?",
+    r: "São para professores de inglês e outros idiomas que já atuam com aulas particulares ou que desejam sair do modelo tradicional de escolas para construir seu próprio negócio lucrativo, estruturado e com liberdade de tempo.",
   },
-  { p: "Preciso ter muitos seguidores para começar?", r: "[Resposta]" },
-  { p: "Os workshops são ao vivo? Ficam gravados?", r: "[Resposta]" },
-  { p: "Funciona para professores de outros idiomas além do inglês?", r: "[Resposta]" },
-  { p: "Por qual formação devo começar?", r: "[Resposta]" },
-  { p: "Como funciona a Imersão Rise?", r: "[Resposta]" },
-  { p: "Quanto tempo tenho de acesso aos conteúdos?", r: "[Resposta]" },
-  { p: "Quais são as formas de pagamento?", r: "[Resposta]" },
+  {
+    p: "Eu preciso já faturar alto para entrar nas mentorias?",
+    r: "Não! Temos uma esteira completa desenhada para cada momento. Se você está começando a precificar, o Preço Certo é o primeiro passo. Se você já tem alunos e quer acelerar para R$ 10k/mês de forma consistente, a Mentoria Partiu 10k é o programa ideal.",
+  },
+  {
+    p: "O que é a Imersão Rise e onde ela acontece?",
+    r: "A Imersão Rise é o nosso grande evento presencial de dois dias (em Alphaville - SP, no Espaço Altus) que reúne professores de todo o país para palestras estratégicas, dinâmicas práticas e networking de altíssimo nível.",
+  },
+  {
+    p: "Como funciona o acompanhamento nas mentorias?",
+    r: "Nas mentorias, você conta com diagnósticos individuais, encontros quinzenais ao vivo diretamente com a Teacher Ana, análise de propostas comerciais e acesso à comunidade exclusiva de mentorados.",
+  },
+  {
+    p: "Quais são as formas de pagamento?",
+    r: "Você pode pagar à vista via PIX, boleto bancário ou dividir em até 12x no cartão de crédito nas principais bandeiras.",
+  },
 ];
 
 export const rodape = [

@@ -225,7 +225,7 @@ export default function Home() {
                   <div>
                     <strong className="caso-res">{c.resultado}</strong>
                     <span className="caso-leg">{c.legenda}</span>
-                    <p>“{c.texto}”</p>
+                    <p>{c.citacao ? `“${c.texto}”` : c.texto}</p>
                   </div>
                   <div className="caso-pessoa">
                     <span className="avatar" />
