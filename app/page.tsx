@@ -16,6 +16,16 @@ export const metadata: Metadata = {
     "A Teacher Ana ajuda professores de idiomas a construírem um negócio educacional lucrativo, estruturado e com autoridade no digital: turmas, posicionamento e Instagram que vende.",
 };
 
+// As fotos preenchem a moldura com object-fit: cover (e a da Ana ainda leva zoom no CSS),
+// então ocupam bem mais pixels do que a largura da moldura. Os valores abaixo dizem ao
+// next/image a largura realmente desenhada, para ele não entregar uma versão pequena e borrada.
+const SIZES = {
+  hero: "(max-width: 900px) 230vw, 100vw",
+  ana: "(max-width: 900px) 300vw, 200vw",
+  workshop: "(max-width: 900px) 200vw, 80vw",
+  rise: "(max-width: 900px) 300vw, 100vw",
+};
+
 export default function Home() {
   return (
     <div className={`home ${inter.variable} ${cinzel.variable}`}>
@@ -43,14 +53,15 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-media">
-            <Image src="/home/palco.jpg" alt="" fill priority sizes="100vw" className="hero-bg" />
+            <Image src="/home/palco.jpg" alt="" fill priority quality={90} sizes={SIZES.hero} className="hero-bg" />
             <div className="hero-fade" />
             <Image
               src="/home/ana-recorte.png"
               alt="Teacher Ana de Araújo no palco da Imersão Rise"
               fill
               priority
-              sizes="100vw"
+              quality={90}
+              sizes={SIZES.hero}
               className="hero-ana"
             />
           </div>
@@ -68,7 +79,7 @@ export default function Home() {
               <p>A maioria dos professores enfrenta as mesmas travas antes de estruturar seu negócio com a Rise.</p>
             </Reveal>
             <Reveal className="jornada-foto" delay={0.1}>
-              <Image src="/home/ana-estudio.png" alt="Teacher Ana" fill sizes="(max-width: 900px) 100vw, 40vw" />
+              <Image src="/home/ana-estudio.png" alt="Teacher Ana" fill quality={90} sizes={SIZES.ana} />
             </Reveal>
             <div className="dores">
               {dores.map((d, i) => (
@@ -142,7 +153,7 @@ export default function Home() {
             </Reveal>
           </div>
           <Reveal className="workshop-img" delay={0.15}>
-            <Image src="/home/palco.jpg" alt="Palco da Imersão Rise" fill sizes="(max-width: 900px) 100vw, 40vw" />
+            <Image src="/home/palco.jpg" alt="Palco da Imersão Rise" fill quality={90} sizes={SIZES.workshop} />
             <div className="workshop-selo">
               <span>Ao vivo com</span>
               <strong>Teacher Ana de Araújo</strong>
@@ -152,7 +163,7 @@ export default function Home() {
 
         {/* IMERSÃO RISE */}
         <section className="rise" id="rise">
-          <Image src="/home/rise.jpg" alt="" fill sizes="100vw" className="rise-bg" />
+          <Image src="/home/rise.jpg" alt="" fill quality={90} sizes={SIZES.rise} className="rise-bg" />
           <div className="rise-overlay" />
           <div className="rise-in container">
             <Reveal>
@@ -251,7 +262,7 @@ export default function Home() {
         {/* SOBRE */}
         <section className="sobre container" id="sobre">
           <Reveal className="sobre-foto">
-            <Image src="/home/ana-estudio.png" alt="Teacher Ana de Araújo" fill sizes="(max-width: 900px) 100vw, 40vw" />
+            <Image src="/home/ana-estudio.png" alt="Teacher Ana de Araújo" fill quality={90} sizes={SIZES.ana} />
           </Reveal>
           <div className="sobre-text">
             <Reveal>
