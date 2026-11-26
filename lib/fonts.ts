@@ -1,4 +1,11 @@
-import { DM_Sans, Instrument_Serif, Inter } from 'next/font/google';
+import { Cinzel, DM_Sans, Instrument_Serif, Inter } from 'next/font/google';
+
+// Usada na home (/) para os detalhes em dourado.
+export const cinzel = Cinzel({
+  subsets: ['latin'],
+  variable: '--font-cinzel',
+  display: 'swap',
+});
 
 export const inter = Inter({
   subsets: ['latin'],
